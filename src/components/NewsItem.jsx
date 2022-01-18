@@ -12,7 +12,7 @@ const NewsItemBlock = styled.div`
       object-fit: cover;
     }
   }
-  .contenets {
+  .contents {
     h2 {
       margin: 0;
       a {
@@ -32,17 +32,17 @@ const NewsItemBlock = styled.div`
 `;
 
 const NewsItem = ({ article }) => {
-  const { title, description, url, urlToImg } = article;
+  const { title, description, url, urlToImage } = article;
   return (
     <NewsItemBlock>
-      {urlToImg && (
+      {urlToImage && (
         <div className="thumbnail">
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <img src={urlToImg} alt="thumbnail" />
+            <img src={urlToImage} alt="thumbnail" />
           </a>
         </div>
       )}
-      <div className="content">
+      <div className="contents">
         <h2>
           <a href={url} target="_blank" rel="noopener noreferrer">
             {title}
